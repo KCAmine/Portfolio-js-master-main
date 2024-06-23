@@ -9,7 +9,7 @@ import UserStories from "../../Assets/Internship/UserStories.png"
 import Archi from "../../Assets/Internship/Archi.png"
 import Jira from "../../Assets/Internship/Jira.png"
 import PullRequest from "../../Assets/Internship/PullRequest.png"
-
+import Agile from "../../Assets/Internship/Agile.jpg.jpg"
 
 
 
@@ -19,21 +19,21 @@ const Internship = () => {
             <Particle />     
             <Container>
                 <h1 className="internship-heading">
-                    Internship at <strong className="purple"> Yole Group </strong>
+                    Yole Digit  <strong className="purple"> Admin </strong>
                 </h1>
                 
             <section className="internship-overview">
-                <h3>Who Is <strong className="purple">Yole Group ? </strong></h3>
             <Row style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "20px"}}>
                
                 <Col md={5} className="internship-card">
                     <InternshipCards
                     imgPath={Yole}
                     isBlog={false}
-                    title="Introduction Image"
+                    title="Yole Group / Nantes"
                     description="
-                    Yole Group provides market research, technology and strategy analysis, reverse engineering and costing, and photonics module performance evaluation, focused on the semiconductor industry and related fields. "
+                    Le groupe Yole fournit des études de marché, des analyses technologiques et stratégiques, de la rétro-ingénierie et des calculs de coûts, ainsi que l'évaluation des performances des modules photoniques, en se concentrant sur l'industrie des semi-conducteurs et les domaines connexes. "
                     ghLink="https://www.yolegroup.com/"
+                    description2="Évaluation des performances des modules photoniques, rétro-ingénierie et calcul des coûts, et études de marché."
                 />
                 </Col>
                 <Col md={5} className="internship-card">
@@ -44,9 +44,22 @@ const Internship = () => {
                         description="Site web qui affiches les infos sur les produits de chaque clients  
                         pouvant ainsi gerer 
                         chaque informations de chaques clients leurs demande de produits , leur acces au produits,
-                        leur page user .. -- Parler de la stack "
+                        leur page user "
+                        description2="Technologies utilisés  : React JS , JAVA , Spring (framework Java ) , PostgreSQL  "
                         />
                     </Col>
+
+                    <Col md={9} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
+                     <InternshipProject
+                        title="Préparation à l'agile "
+                        imgPath={Agile}
+                        isBlog={false}
+                        comp1= "Définir les objectifs & cycle de vie "
+                        comp2= "Prévoir le planning et la répartition des tâches avec des durées de sprint normées "
+                        />
+
+                </Col>
+
                 <Col md={5} className="internship-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}> 
                      <InternshipProject 
                         title="Creation du ticket "
@@ -62,6 +75,7 @@ const Internship = () => {
                         imgPath={Jira}
                         isBlog={false}
                         description="Tableau de cycle de résolution de tache permettant a l'administrateur de gerer les differents issues/tasks que chaque equipier effectuer,  l'adiministrateur "
+                        description2="Gérer les différents états de la tache"
                         />
                 </Col>
                 <Col md= {9} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>                   
@@ -83,8 +97,8 @@ const Internship = () => {
                         comp2= "Crée une pull request pour passer son travail en revue par l'administrateur afin qu'il puisse la valider ou alors la remmetre  en cour"
                         />
                 </Col>
-
-                  
+                
+                   {/*TODO Add Comparaison  with added function , add conclusion here add gaming house project image */}
             </Row>
         </section>
         </Container>
