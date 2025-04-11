@@ -15,33 +15,32 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              A  <span className="purple"> PROPOS </span> DE MOI 
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+            Je suis passionné par la programmation, et j’apprends un peu plus chaque jour ! 🤷‍♂️
               <br />
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              J’aime particulièrement créer des 
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
+                <b className="purple">des applications web </b> et
+                explorer les domaines liés à la {" "}
                 <b className="purple">
                   Blockchain.
                 </b>
               </i>
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">React.js</b> and
+              Je travaille principalement avec 
+               <b className="purple"> React.js</b> et des frameworks 
               <i>
                 <b className="purple">
                   {" "}
-                  Modern Javascript Library and Frameworks
+                  JavaScript.
                 </b>
               </i>
-              &nbsp; like
+              &nbsp;  modernes comme 
               <i>
                 <b className="purple"> React.js and Next.js</b>
               </i>
@@ -52,9 +51,9 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
+            <h1>TROUVEZ MOI </h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              N'hesitez pas à  <span className="purple">me contacter </span> sur 
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
