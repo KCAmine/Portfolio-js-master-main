@@ -17,6 +17,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import InternshipMeet from "./components/Internship/InternshipMeetMagnet";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -40,6 +41,7 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/internship" element={<Internship />} />
+          <Route path="/internshipMeet" element={<InternshipMeet/>}/>
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>

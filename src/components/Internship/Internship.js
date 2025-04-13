@@ -10,13 +10,25 @@ import Archi from "../../Assets/Internship/Archi.png"
 import Jira from "../../Assets/Internship/Jira.png"
 import PullRequest from "../../Assets/Internship/PullRequest.png"
 import Agile from "../../Assets/Internship/Agile.jpg.jpg"
+import { useNavigate } from "react-router-dom";
 
 
 
 const Internship = () => {
+
+        const navigate = useNavigate()
+
+        const goToNewPage=()=>{
+            navigate("/internshipMeet");
+        }
+
+    
+
+
+
     return (  
         <Container className="internship-section">
-            <Particle />     
+              
             <Container>
                 <h1 className="internship-heading">
                     Yole Digit  <strong className="purple"> Admin </strong>
@@ -98,6 +110,13 @@ const Internship = () => {
                         />
                 </Col>
                 
+                  
+                  
+                <button type="button" onClick={goToNewPage} className="btn btn-primary"> aller a  MeetMagnet </button>
+
+
+
+                  
                    {/*TODO Add Comparaison  with added function , add conclusion here add gaming house project image */}
             </Row>
         </section>
