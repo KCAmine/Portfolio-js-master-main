@@ -12,28 +12,41 @@ function InternshipProject(props) {
         
         <Card.Img variant="top" src={props.imgPath} alt="" />
         <Card.Img variant="top" src={props.imgPath2} alt=""/>
+
         <Card.Body>
-          <Card.Text style={{textAlign: "justify"}}>
-                {props.description}
-          </Card.Text>
+        {props.description && (
           <Card.Text style={{ textAlign: "justify" }}>
-            {props.comp} 
+            {props.description}
           </Card.Text>
-          <Card.Text style={{textAlign: "justify"}}>
-            Compétence : &nbsp;
-                <strong>JavaScript (React.js), PostGreSQL, Jira, BitBucket</strong>
-                &nbsp;
-                {"\n"}
-                {"\n"}
-                <ul>&nbsp;
-                    <li>{props.comp1}</li>                    
-                    <li>{props.comp2} </li>
-                </ul>
+        )}
+
+          {props.comp && (
+          <Card.Text style={{ textAlign: "justify" }}>
+            {props.comp}
           </Card.Text>
+        )}
+
+
+         {props.compTech && (
+          <Card.Text style={{ textAlign: "justify" }}>
+            <strong>Compétence :</strong> {props.compTech}
+          </Card.Text>
+        )}
+
+        {(props.comp1 || props.comp2) && (
+          <ul style={{ paddingLeft: "20px", textAlign: "left" }}>
+          {props.comp1 && <li>{props.comp1}</li>}
+          {props.comp2 && <li>{props.comp2}</li>}
+        </ul>
+        )}
 
           <Button variant="primary" href={props.ghLink} target="_blank">
             <FaUserGroup /> &nbsp;
-            {props.ghLink? "Company " : "Framagit"}
+            {props.ghLink?.includes("github.com")
+            ? "GitHub"
+            : props.ghLink?.includes("framagit.org")
+            ? "Framagit"
+            : "Company"}
           </Button>
           {"\n"}
           {"\n"}

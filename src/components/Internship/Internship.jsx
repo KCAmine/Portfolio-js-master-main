@@ -22,10 +22,6 @@ const Internship = () => {
             navigate("/internshipMeet");
         }
 
-    
-
-
-
     return (  
         <Container className="internship-section">
               
@@ -66,6 +62,7 @@ const Internship = () => {
                         title="Préparation à l'agile "
                         imgPath={Agile}
                         isBlog={false}
+                        compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
                         comp1= "Définir les objectifs & cycle de vie "
                         comp2= "Prévoir le planning et la répartition des tâches avec des durées de sprint normées "
                         />
@@ -77,6 +74,7 @@ const Internship = () => {
                         title="Creation du ticket "
                         imgPath={UserStories}
                         isBlog={false} 
+                        compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
                         comp1="Collecter, suivre des demandes depuis les tickets Jira "    
                         comp2="Mettre en place son environnement d'apprentissage personal"
                         />
@@ -86,6 +84,7 @@ const Internship = () => {
                         title="Gestion du Projet "
                         imgPath={Jira}
                         isBlog={false}
+                        compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
                         description="Tableau de cycle de résolution de tache permettant a l'administrateur de gerer les differents issues/tasks que chaque equipier effectuer,  l'adiministrateur "
                         description2="Gérer les différents états de la tache"
                         />
@@ -95,6 +94,7 @@ const Internship = () => {
                         title=" Passer au developpement "
                         imgPath={Archi}
                         isBlog={false}
+                        compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
                         comp1="Exploiter des référentiels, normes et standards
                          adoptés par le prestataire informatiqe"
                         comp2="Se reperer dans une grosse architecture "
@@ -105,14 +105,14 @@ const Internship = () => {
                         title="Création d'une Pull request  "
                         imgPath2={PullRequest}
                         isBlog={false}
+                        compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
                         comp1= "Traiter des demandes "
                         comp2= "Crée une pull request pour passer son travail en revue par l'administrateur afin qu'il puisse la valider ou alors la remmetre  en cour"
                         />
                 </Col>
                 
                   
-                  
-                <button type="button" onClick={goToNewPage} className="btn btn-primary"> aller a  MeetMagnet </button>
+                <button type="button" onClick={goToNewPage} className="btn btn-primary"> Stage suivant </button>
 
 
 
