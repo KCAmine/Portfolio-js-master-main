@@ -46,7 +46,11 @@ function InternshipProject(props) {
             ? "GitHub"
             : props.ghLink?.includes("framagit.org")
             ? "Framagit"
-            : "Company"}
+            :props.ghLink?.includes("notion.so")
+            ? "Notion"
+            :props.ghLink?.includes("supabase.com")
+            ? "Supabase"
+            : "Informations"}
           </Button>
           {"\n"}
           {"\n"}

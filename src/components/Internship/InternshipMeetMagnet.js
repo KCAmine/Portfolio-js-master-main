@@ -1,12 +1,18 @@
 import React from "react";
 import Particle from "../Particle";
 import InternshipCards from "./InternshipCards";
-import { Container , Row, Col} from "react-bootstrap"; 
-import { useNavigate } from "react-router-dom";
+import { Container , Row, Col} from "react-bootstrap" 
+import { useNavigate } from "react-router-dom"
 import MeetMagnet from "../../Assets/InternshipMeet/meetMagnet.png"
-import InternshipProject from "./InternshipProject";
+import InternshipProject from "./InternshipProject"
 import Scrapper from "../../Assets/Projects/scrappeur.png"
 import Appsmith from "../../Assets/InternshipMeet/Appsmith.png"
+import BillingMeet from "../../Assets/InternshipMeet/OnboardingMeet.png"
+import KanbanMeet from "../../Assets/InternshipMeet/KanbanMeet.png"
+import OnboardingMeet from "../../Assets/InternshipMeet/OnboardingMeet.png"
+import SupaBaseMeet from "../../Assets/InternshipMeet/SupaBaseMeet.png"
+
+
 
 
 const InternshipMeet = () => {
@@ -61,6 +67,31 @@ const InternshipMeet = () => {
                     />                
                     
                     </Col>
+
+                <Col md={9} className="internship-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
+
+                <InternshipProject
+                        title="Refonte de MeetMagnet - Gestion des tâches "
+                        imgPath={KanbanMeet}
+                        description="Organisation du travail sur le projet MeetMagnet à l’aide de Notion en Kanban. Les tâches sont planifiées, découpées en sous-tâches et suivies de manière structurée. Utilisation de Git avec branches (dev, main) pour une bonne gestion de version."
+                        compTech="Notion, Git, VSCode"
+                        comp1="Gérer un projet avec planification et sous-tâches"
+                        comp2="Travailler en équipe avec Git (branches, commit, merge)"
+                        ghLink="https://www.notion.so/meetmagnet/Refonte-Meet-Magnet-1ba253f85881809ab143f521f62f41f8"
+                    />
+                </Col>
+
+                <Col md={9} className="internship-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
+                    <InternshipProject
+                        title="Refonte de MeetMagnet - Configuration de supabase"
+                        imgPath={SupaBaseMeet}
+                        description = "nstallation et configuration de Supabase pour le projet MeetMagnet. Connexion au backend, création des tables, gestion des données utilisateurs. Test de la récupération et de l’envoi de données via l’interface."
+                        compTech="Supabase, PostGreSQL"
+                        comp1="Déployer et configurer une base de données"
+                        comp2="Tester les échanges client ↔ serveur"  
+                        ghLink="https://supabase.com/dashboard/project/ursjxjcwumyvdwrmfndv/database/schemas" 
+                    />      
+                </Col>
 
             
             </Row>
