@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.custom-modal-dark {
+  background-color: #0e0e1a !important;
+  color: white !important;
+  border-radius: 10px;
+  border: 1px solid #5a5a5a;
+}
+
+.custom-modal-dark .modal-content {
+  background-color: #0e0e1a !important;
+  color: white !important;
+}
+
+.custom-modal-dark .modal-header,
+.custom-modal-dark .modal-footer {
+  border-color: #333 !important;
+}
+
+.custom-modal-dark .modal-title {
+  color: #fff !important;
+}
+
+.custom-modal-dark a {
+  color: #61dafb;
+}
+
+.custom-modal-dark img {
+  border-radius: 8px;
+  margin-top: 15px;
+}
