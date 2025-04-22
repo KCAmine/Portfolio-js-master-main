@@ -11,6 +11,7 @@ import Jira from "../../Assets/Internship/Jira.png"
 import PullRequest from "../../Assets/Internship/PullRequest.png"
 import Agile from "../../Assets/Internship/Agile.jpg.jpg"
 import { useNavigate } from "react-router-dom";
+import AgilOtherOne from "../../Assets/Internship/AgilOtherOne.png"
 
 
 
@@ -55,18 +56,43 @@ const Internship = () => {
                         />
                     </Col>
 
-                    <Col md={9} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
+                    <Col md={6} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
                      <InternshipProject
                         title="Préparation à l'agile "
-                        imgPath={Agile}                       
+                        imgPath={Agile}
+                        hasModal={true}    
+                        imgGallery={[AgilOtherOne]}           
                         compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
                         comp1= "Définir les objectifs & cycle de vie "
                         comp2= "Prévoir le planning et la répartition des tâches avec des durées de sprint normées "
+                        description2={
+                            <>
+                              <h5>📌 Introduction rapide à Agile</h5>
+                              <ul>
+                                <li>Travail divisé en **sprints** (périodes fixes)</li>
+                                <li>Chaque sprint a : plan → dev → test → livraison</li>
+                                <li>Objectifs clairs et livrables définis à l’avance</li>
+                              </ul>
+                      
+                              <h5>🧩 Mise en place</h5>
+                              <ul>
+                                <li>Utilisation de <strong>Jira</strong> pour le suivi des tâches</li>
+                                <li>Organisation en stories, tâches, sous-tâches</li>
+                                <li>Rétrospective à chaque fin de sprint pour s’améliorer</li>
+                              </ul>
+                      
+                              <h5>📋 Résultat</h5>
+                              <p>
+                                Une meilleure vision d'ensemble et un suivi précis des priorités.
+                              </p>
+                            </>
+                          }
+
                         />
 
                 </Col>
 
-                <Col md={5} className="internship-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}> 
+                <Col md={8} className="internship-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}> 
                      <InternshipProject 
                         title="Creation du ticket "
                         imgPath={UserStories}                       
@@ -84,7 +110,7 @@ const Internship = () => {
                         description2="Gérer les différents états de la tache"
                         />
                 </Col>
-                <Col md= {9} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>                   
+                <Col md= {6} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>                   
                     <InternshipProject
                         title=" Passer au developpement "
                         imgPath={Archi}
@@ -97,20 +123,17 @@ const Internship = () => {
                 <Col md={9} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>                    
                     <InternshipProject
                         title="Création d'une Pull request  "
-                        imgPath2={PullRequest}                        
-                        compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
+                        imgPath={PullRequest}                        
+                        compTech=" PostGreSQL, Jira, BitBucket"
                         comp1= "Traiter des demandes "
-                        comp2= "Crée une pull request pour passer son travail en revue par l'administrateur afin qu'il puisse la valider ou alors la remmetre  en cour"
+                        comp2= "Crée une pull request pour passer son travail en revue par le chef de projet  afin qu'il puisse la valider ou alors la remmetre  en cour"
                         />
                 </Col>
                 
                   
                 <button type="button" onClick={goToNewPage} className="btn btn-primary"> Stage suivant </button>
+     
 
-
-
-                  
-                   {/*TODO Add Comparaison  with added function , add conclusion here add gaming house project image */}
             </Row>
         </section>
         </Container>
