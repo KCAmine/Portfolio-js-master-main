@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { FaUserGroup } from "react-icons/fa6";
 
 function ProjectCards(props) {
   const [show, setShow] = useState(false);
@@ -25,8 +26,16 @@ function ProjectCards(props) {
           </Card.Text>
 
           <Button variant="primary" href={props.ghLink} target="_blank">
-            <BsGithub /> &nbsp;
-            {props.isBlog ? "Blog" : "Framagit"}
+            <FaUserGroup /> &nbsp;
+            {props.ghLink?.includes("github.com")
+              ? "GitHub"
+              : props.ghLink?.includes("framagit.org")
+              ? "Framagit"
+              : props.ghLink?.includes("notion.so")
+              ? "Notion"
+              : props.ghLink?.includes("supabase.com")
+              ? "Supabase"
+              : "Informations"}
           </Button>
 
           {!props.isBlog && props.demoLink && (

@@ -16,6 +16,11 @@ import Branche from "../../Assets/Projects/BrancheMiniStage.png"
 import Task from "../../Assets/Projects/TaskMiniStage.png"
 import env from "../../Assets/Projects/VarEnvMiniStage.png"
 import MiniStagePic from "../../Assets/Projects/MiniStagePic.png"
+import Portfolio from "../../Assets/Projects/Portfolio.png"
+import PortfolioStage from "../../Assets/Projects/PortfolioStage.png"
+import runBuild from "../../Assets/Projects/RunBuild.png"
+import InovaPerf from "../../Assets/Projects/InovaPerf.png"
+import deployPortfolio from "../../Assets/Projects/DeployPortfolio.png"
 
 
 
@@ -94,7 +99,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={7} className="project-card"  style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
+          <Col md={4} className="project-card"  style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
           <ProjectCards
           title="Ministages44"
           imgPath={MiniStagePic}
@@ -134,6 +139,40 @@ function Projects() {
           }
         />
         /</Col>
+
+        <Col md={4} className="project-card"  style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
+        <ProjectCards
+          title="Portfolio personnel"
+          imgPath={Portfolio}
+          technologies="React.js, HTML, CSS, GitHub Pages"
+          description="Développement de mon portfolio professionnel pour présenter mes projets, compétences et parcours de formation."
+          ghLink="https://github.com/KCAmine/Portfolio-js-master-main"
+          demoLink="https://mejdiamine.fr"
+          hasModal={true}
+          imgGallery={[PortfolioStage, InovaPerf, runBuild, deployPortfolio]}
+          description2={
+            <>
+              <p>
+                Portfolio développé pour centraliser et valoriser mes projets et compétences techniques, avec une mise en ligne publique.
+              </p>
+
+              <h5>🎯 Objectifs</h5>
+              <ul>
+                <li>Améliorer ma visibilité pro en ligne</li>
+                <li>Référencement du site (balises, SEO de base)</li>
+                <li>Hébergé sur InovaPerf avec déploiement manuel </li>
+              </ul>
+
+              <h5>📦 Compétences mobilisées</h5>
+              <ul>
+                <li><strong>Mettre à disposition un service :</strong> déploiement, mise en ligne</li>
+                <li><strong>Développement pro :</strong> gestion de mon identité numérique et projet personnel</li>
+              </ul>
+            </>
+          }
+        />
+        </Col>
+
 
         </Row>
       </Container>
