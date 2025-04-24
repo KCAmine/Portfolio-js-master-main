@@ -19,7 +19,9 @@ import SupaBaseInsert from "../../Assets/InternshipMeet/SupaBaseInsert.png"
 import SupaBaseSQL from "../../Assets/InternshipMeet/SupaBaseSQL.png"
 import SupaBaseCreate from "../../Assets/InternshipMeet/SupaBaseCreate.png"
 import BenchMarkScrapping from "../../Assets/InternshipMeet/BenchMarkScrapping.png"
-
+import TaskNotion from "../../Assets/InternshipMeet/TasksNotiion.png"
+import NotionRename from "../../Assets/InternshipMeet/NotionRename.png"
+import notionScrapping from "../../Assets/InternshipMeet/NotionScrapping.png"
 
 const InternshipMeet = () => {
 
@@ -48,6 +50,18 @@ const InternshipMeet = () => {
                     />    
                 </Col>
 
+
+                
+                <Col md={9} className="internship-card">
+                    <InternshipProject
+                    title="Notion"
+                    imgPath={NotionRename}
+                    description= "Utilisation de notion "
+                    ghLink="https://blog.meet-magnet.com/"
+                    />    
+                </Col>
+
+
                  <Col md={6} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
                     <InternshipProject 
                         title="Mission Scrapper"
@@ -58,7 +72,7 @@ const InternshipMeet = () => {
                         comp1="Collecter, suivre et orienter des demandes"
                         comp2="Traiter des demandes concernant les applications"
                         ghLink="https://github.com/KCAmine/JavaScript"
-                        imgGallery={[BenchMarkScrapping]}
+                        imgGallery={[ notionScrapping ,BenchMarkScrapping ]}
                         
                         description2={
                             <>
@@ -103,7 +117,7 @@ const InternshipMeet = () => {
                         comp1="Déployer un service"
                         comp2="Accompagner les utilisateurs dans la mise en place d'un service"
                         ghLink="https://www.appsmith.com/"
-                        imgGallery={[BenchMark, InstallAppsmith ]}
+                        imgGallery={[ TaskNotion ,BenchMark, InstallAppsmith ]}
                         description2={
                         <>
                             <ul>
