@@ -16,129 +16,99 @@ import AgilOtherOne from "../../Assets/Internship/AgilOtherOne.png"
 
 
 const Internship = () => {
+    const navigate = useNavigate();
+    const goToNewPage = () => { navigate("/internshipMeet"); }
 
-        const navigate = useNavigate()
-
-        const goToNewPage=()=>{
-            navigate("/internshipMeet");
-        }
-
-    return (  
+   return (
         <Container className="internship-section">
-              
+            <div style={{ zIndex: -1 }}><Particle /></div>
+            
             <Container>
                 <h1 className="internship-heading">
-                    Yole Digit  <strong className="purple"> Admin </strong>
+                    Full-Stack Developer <strong className="purple"> Internship </strong>
                 </h1>
                 
-            <section className="internship-overview">
-            <Row style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "20px"}}>
-               
-                <Col md={5} className="internship-card">
-                    <InternshipCards
-                    imgPath={Yole}
-                    title="Yole Group / Nantes"
-                    description="
-                    Le groupe Yole fournit des études de marché, des analyses technologiques et stratégiques, de la rétro-ingénierie et des calculs de coûts, ainsi que l'évaluation des performances des modules photoniques, en se concentrant sur l'industrie des semi-conducteurs et les domaines connexes. "
-                    ghLink="https://www.yolegroup.com/"
-                    description2="Évaluation des performances des modules photoniques, rétro-ingénierie et calcul des coûts, et études de marché."
-                />
-                </Col>
-                <Col md={5} className="internship-card">
-                    <InternshipCards 
-                        imgPath={AccountPage}                        
-                        title = "Yole Digit Admin"
-                        description="Site web qui affiches les infos sur les produits de chaque clients  
-                        pouvant ainsi gerer 
-                        chaque informations de chaques clients leurs demande de produits , leur acces au produits,
-                        leur page user "
-                        description2="Technologies utilisés  : React JS , JAVA , Spring (framework Java ) , PostgreSQL  "
-                        />
-                    </Col>
+                <section className="internship-overview">
+                    <Row style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "20px"}}>
+                        
+                        {/* CONTEXTE ENTREPRISE */}
+                        <Col md={5} className="internship-card">
+                            <InternshipCards
+                                imgPath={Yole}
+                                title="Yole Group | High-Tech Market Analysis"
+                                description="Yole Group provides market research, technology and strategy analysis, reverse engineering and costing, and photonics module performance evaluation, focused on the semiconductor industry and related fields"
+                                description2="Context: Operating in a high-security environment with sensitive data from a high-tech firm."
+                            />
+                        </Col>
 
-                    <Col md={6} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
-                     <InternshipProject
-                        title="Préparation à l'agile "
-                        imgPath={Agile}
-                        hasModal={true}    
-                        imgGallery={[AgilOtherOne]}           
-                        compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
-                        comp1= "Définir les objectifs & cycle de vie "
-                        comp2= "Prévoir le planning et la répartition des tâches avec des durées de sprint normées "
-                        description2={
-                            <>
-                              <h5>📌 Introduction rapide à Agile</h5>
-                              <ul>
-                                <li>Travail divisé en **sprints** (périodes fixes)</li>
-                                <li>Chaque sprint a : plan → dev → test → livraison</li>
-                                <li>Objectifs clairs et livrables définis à l’avance</li>
-                              </ul>
-                      
-                              <h5>🧩 Mise en place</h5>
-                              <ul>
-                                <li>Utilisation de <strong>Jira</strong> pour le suivi des tâches</li>
-                                <li>Organisation en stories, tâches, sous-tâches</li>
-                                <li>Rétrospective à chaque fin de sprint pour s’améliorer</li>
-                              </ul>
-                      
-                              <h5>📋 Résultat</h5>
-                              <p>
-                                Une meilleure vision d'ensemble et un suivi précis des priorités.
-                              </p>
-                            </>
-                          }
+                        {/* CONTEXTE PROJET (TON TRAVAIL) */}
+                        <Col md={5} className="internship-card">
+                            <InternshipCards 
+                                imgPath={AccountPage}                        
+                                title="Project: Yole Digit Admin"
+                                description="I worked on 'Yole Digit Admin', an internal enterprise platform. This tool is the backbone of the company's digital services, allowing admins to manage thousands of client accounts, product licenses, and data access."
+                                description2="My Goal : Developing secure features to automate subscription management and user access."
+                            />
+                        </Col>
 
-                        />
+                        {/* METHODOLOGIE */}
+                        <Col md={5} className="internships-cards" style={{ paddingTop: "30px"}}>
+                            <InternshipProject
+                                title="Agile Integration"
+                                imgPath={Agile}
+                                hasModal={true}    
+                                imgGallery={[AgilOtherOne]}           
+                                compTech="Scrum Methodology"
+                                comp1="Working within a structured Agile team with daily stand-ups and bi-weekly sprints."
+                                comp2="Bridging the gap between client requirements and technical execution."
+                                description2={
+                                    <>
+                                        <h5>Agile Context</h5>
+                                        <p>At Yole, software quality is priority #1. We followed a strict Scrum lifecycle to ensure every feature was tested and validated before moving to production.</p>
+                                    </>
+                                }
+                            />
+                        </Col>
 
-                </Col>
+                        {/* GESTION DE TACHES */}
+                        <Col md={5} className="internships-cards" style={{ paddingTop: "30px"}}> 
+                            <InternshipProject 
+                                title="Requirement Engineering"
+                                imgPath={UserStories}                      
+                                compTech="Jira & Technical Spec"
+                                comp1="Translated complex business needs into actionable technical tickets."
+                                comp2="Analyzed existing database schemas to ensure seamless feature integration."
+                            />
+                        </Col>
 
-                <Col md={8} className="internship-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}> 
-                     <InternshipProject 
-                        title="Creation du ticket "
-                        imgPath={UserStories}                       
-                        compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
-                        comp1="Collecter, suivre des demandes depuis les tickets Jira "    
-                        comp2="Mettre en place son environnement d'apprentissage personal"
-                        />
-                </Col>
-                <Col md={5} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
-                    <InternshipCards
-                        title="Gestion du Projet "
-                        imgPath={Jira}                       
-                        compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
-                        description="Tableau de cycle de résolution de tache permettant a l'administrateur de gerer les differents issues/tasks que chaque equipier effectuer,  l'adiministrateur "
-                        description2="Gérer les différents états de la tache"
-                        />
-                </Col>
-                <Col md= {6} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>                   
-                    <InternshipProject
-                        title=" Passer au developpement "
-                        imgPath={Archi}
-                        compTech="JavaScript (React.js), PostGreSQL, Jira, BitBucket"
-                        comp1="Exploiter des référentiels, normes et standards
-                         adoptés par le prestataire informatiqe"
-                        comp2="Se reperer dans une grosse architecture "
-                        />
-                </Col>
-                <Col md={9} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>                    
-                    <InternshipProject
-                        title="Création d'une Pull request  "
-                        imgPath={PullRequest}                        
-                        compTech=" PostGreSQL, Jira, BitBucket"
-                        comp1= "Traiter des demandes "
-                        comp2= "Crée une pull request pour passer son travail en revue par le chef de projet  afin qu'il puisse la valider ou alors la remmetre  en cour"
-                        />
-                </Col>
-                
-                  
-                <button type="button" onClick={goToNewPage} className="btn btn-primary"> Stage suivant </button>
-     
+                        {/* DEVELOPPEMENT TECHNIQUE */}
+                        <Col md={5} className="internships-cards" style={{ paddingTop: "30px"}}>                   
+                            <InternshipProject
+                                title="Full-Stack Implementation"
+                                imgPath={Archi}
+                                compTech="React.js & Java Spring Boot"
+                                comp1="Developed scalable UI components using React and managed backend logic with Spring Boot."
+                                comp2="Maintained code integrity within a large-scale enterprise architecture."
+                            />
+                        </Col>
 
-            </Row>
-        </section>
+                        {/* QUALITÉ CODE */}
+                        <Col md={5} className="internships-cards" style={{ paddingTop: "30px"}}>                    
+                            <InternshipProject
+                                title="Version Control & Peer Review"
+                                imgPath={PullRequest}                        
+                                compTech="Git & BitBucket"
+                                comp1="Used BitBucket for collaborative coding, following a strict branch naming convention."
+                                comp2="Engaged in Pull Request reviews to maintain high security and performance standards."
+                            />
+                        </Col>
+
+                    </Row>
+
+                    <button type="button" onClick={goToNewPage} className="btn btn-next"> Next Experience </button>
+                </section>
+            </Container>
         </Container>
-        </Container>
-    )
+    );
 }
-
 export default Internship;

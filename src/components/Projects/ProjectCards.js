@@ -5,6 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 import { FaUserGroup } from "react-icons/fa6";
+import Container from "react-bootstrap/Container";
 
 function ProjectCards(props) {
   const [show, setShow] = useState(false);
@@ -12,12 +13,17 @@ function ProjectCards(props) {
   return (
     <>
       <Card className="project-card-view">
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+      <Card.Title style={{ paddingTop: "20px" }} > <strong>{props.title}</strong></Card.Title>
+        
+
+
+        <Container style={{ padding: "10px", height: "300px", overflow: "hidden" }}> 
+        <Card.Img variant="top"  style={{ width: "100%", height: "100%", objectFit: "cover" }}src={props.imgPath} alt="card-img" />
+        </Container>
         <Card.Body>
           <Card.Text style={{ textAlign: "justify" }}>
             <ul>
-              <li><strong>Technologies : {props.technologies}</strong></li>
+              <li><strong>Built with  {props.technologies}</strong></li>
             </ul>
           </Card.Text>
 
@@ -76,7 +82,7 @@ function ProjectCards(props) {
             <Modal.Title>{props.title} - Détails</Modal.Title>
           </Modal.Header>
 
-          <Modal.Body>
+          <Modal.Body className="custom-modal-body">
             {props.description2 && (
               <div style={{ marginTop: "10px" }}>{props.description2}</div>
             )}

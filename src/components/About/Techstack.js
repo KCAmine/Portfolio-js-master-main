@@ -10,6 +10,7 @@ import {
   DiCss3,
   DiPhp,
   DiHtml5,
+  DiSymfony
 } from "react-icons/di";
 import {
   SiPostgresql,
@@ -19,7 +20,11 @@ import {
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-            <Col xs={4} md={2} className="tech-icons">
+
+      <Col xs={4} md={2} className="tech-icons">
+        <DiSymfony />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <DiPython />
       </Col>
       <Col xs={4} md={2} className="tech-icons">

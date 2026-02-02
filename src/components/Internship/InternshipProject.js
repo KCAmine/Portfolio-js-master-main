@@ -8,10 +8,14 @@ function InternshipProject(props) {
   return (
     <>
       <Card className="project-card-view">
-        <Card.Title style={{ textAlign: "center" }}>{props.title}</Card.Title>
+        <Card.Title style={{ textAlign: "center", paddingTop: "30px" }}>{props.title}</Card.Title>
 
         {/* Image principale dans la carte */}
-        <Card.Img variant="top" src={props.imgPath} alt="" />
+        <Card.Img variant="top" style={{ width: "100%", height: "60%"}} src={props.imgPath} alt="" />
+         {/* Disclaimer for sensitive data */}
+            <p style={{ fontSize: "0.8rem", fontStyle: "italic", textAlign: "center", marginTop: "5px", color: "#888" }}>
+                Note: Visuals are blurred or simplified to protect sensitive corporate data.
+            </p>
 
         <Card.Body>
           {props.description && (
@@ -23,7 +27,7 @@ function InternshipProject(props) {
           )}
 
           {props.compTech && (
-            <Card.Text><strong>Compétence :</strong> {props.compTech}</Card.Text>
+            <Card.Text><strong>Skills:</strong> {props.compTech}</Card.Text>
           )}
 
           {(props.comp1 || props.comp2) && (
@@ -33,18 +37,10 @@ function InternshipProject(props) {
             </ul>
           )}
 
-          <Button variant="primary" href={props.ghLink} target="_blank">
-            <FaUserGroup /> &nbsp;
-            {props.ghLink?.includes("github.com")
-              ? "GitHub"
-              : props.ghLink?.includes("framagit.org")
-              ? "Framagit"
-              : props.ghLink?.includes("notion.so")
-              ? "Notion"
-              : props.ghLink?.includes("supabase.com")
-              ? "Supabase"
-              : "Informations"}
-          </Button>
+        
+            
+              
+       
 
           {/* Affiche le bouton Détails uniquement si hasModal est true */}
           {props.hasModal && (
@@ -53,7 +49,7 @@ function InternshipProject(props) {
               onClick={() => setShow(true)}
               style={{ marginLeft: "10px" }}
             >
-              Détails
+              Details
             </Button>
           )}
         </Card.Body>
@@ -69,7 +65,7 @@ function InternshipProject(props) {
           contentClassName="custom-modal-dark"
         >
           <Modal.Header closeButton>
-            <Modal.Title>{props.title} - Détails</Modal.Title>
+            <Modal.Title>{props.title} - Overview </Modal.Title>
           </Modal.Header>
 
           <Modal.Body>
@@ -90,7 +86,7 @@ function InternshipProject(props) {
           </Modal.Body>
 
           <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShow(false)}>Fermer</Button>
+            <Button variant="secondary" onClick={() => setShow(false)}>Close</Button>
           </Modal.Footer>
         </Modal>
       )}

@@ -24,193 +24,138 @@ import NotionRename from "../../Assets/InternshipMeet/NotionRename.png"
 import notionScrapping from "../../Assets/InternshipMeet/NotionScrapping.png"
 
 const InternshipMeet = () => {
-
     const navigate = useNavigate();
+    const goToLastPage = () => { navigate("/internship"); }
 
-    
     return (
-        <Container  className="internship-section">
-            <Particle/>
+        <Container className="internship-section">
+            <div style={{ zIndex: -1 }}>
+                <Particle />
+            </div>
+            
             <Container>
-                <h1 className="internship-heading"> Meet Magnet </h1>
+                <h1 className="internship-heading"> MeetMagnet <strong className="purple"> Experience </strong></h1>
             </Container>
 
+            <section className="internship-overview">
+                <Row style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "20px"}}>
 
-        <section className="internship-heading">
-            <Row style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "20px"}}>
-
-                <Col md={9} className="internship-card">
-                    <InternshipProject
-                    title="MeetMagnet  "
-                    imgPath={MeetMagnet}
-                  
-                    description= "MeetMagnet est une entreprise française qui propose une plateforme SaaS utilisant l'intelligence artificielle pour aider les professionnels à identifier et contacter des prospects qualifiés au moment opportun."
-                    ghLink="https://blog.meet-magnet.com/"
-                    description2= "..."
-                    />    
-                </Col>
-
-
-                
-                <Col md={9} className="internship-card">
-                    <InternshipProject
-                    title="Notion"
-                    imgPath={NotionRename}
-                    description= "Utilisation de notion "
-                    ghLink="https://blog.meet-magnet.com/"
-                    />    
-                </Col>
-
-
-                 <Col md={6} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
-                    <InternshipProject 
-                        title="Mission Scrapper"
-                        imgPath={Scrapper}
-                        hasModal={true}
-                        compTech="JavaScript (puppeteer), HTML "
-                        description="Scrappeur web réalisé pour un particulier. Il gère la pagination, récupère les données sur chaque page, puis génère un fichier CSV contenant toutes les informations collectées."
-                        comp1="Collecter, suivre et orienter des demandes"
-                        comp2="Traiter des demandes concernant les applications"
-                        ghLink="https://github.com/KCAmine/JavaScript"
-                        imgGallery={[ notionScrapping ,BenchMarkScrapping ]}
-                        
-                        description2={
-                            <>
-                            <h5>🧪 Objectif du scraping</h5>
-                            <p>Données ciblées lors du scraping :</p>
-                            <ul>
-                              <li>Price, Media, Domain rating, Domain authority</li>
-                              <li>Authority score, Organic Traffic, Categories</li>
-                              <li>Country, Language, Referring domains, Spam score</li>
-                            </ul>
-                        
-                            <h5>🔍 Benchmark des outils testés</h5>
-                            <ul>
-                              <li><a href="https://rapidapi.com/" target="_blank">RapidAPI</a> – Bon accès API mais limité sans abonnement</li>
-                              <li><a href="https://easyscraper.com/" target="_blank">Easy Scrapper </a> – Extension google </li>
-                              <li><a href="https://pptr.dev/" target="_blank">Puppeteer Dooc </a> – Documentation pour l'installation et l'utilisation de puppeteer</li>
-                              <li><a href="https://console.apify.com/actors/rHg1Nv0ktL3a3DPhh/source" target="_blank">Scraper Apify d’Étienne</a> – Bon point de départ pour test</li>
-                            </ul>
-                        
-                            <h5>⚙️ Développement du scrapper</h5>
-                            <ul>
-                              <li>Script en JavaScript avec Puppeteer</li>
-                              <li>Scraping <strong>page par page</strong> pour éviter le blocage</li>
-                              
-                            </ul>
-                        
-                            <h5>📦 Livrable</h5>
-                            <p>Un scrapper fonctionnel qui collecte les données et les exporte en <strong>CSV</strong>.</p>
-                            <p>Une démonstration de scraping sur le site cible (ex. <em>Bazoom</em>) a été réalisée avec succès.</p>
-                          </>
-                        }
-                        />
-                </Col>
-
-                <Col md={6} className="internships-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
-                    <InternshipProject
-                        title="Mission Appsmith"
-                        hasModal={true}
-                        imgPath={Appsmith}
-                        description="Installer et configurer Appsmith en self host pour créer des dashboards internes"
-                        compTech="Docker, Linux, PostGreSQL"
-                        comp1="Déployer un service"
-                        comp2="Accompagner les utilisateurs dans la mise en place d'un service"
-                        ghLink="https://www.appsmith.com/"
-                        imgGallery={[ TaskNotion ,BenchMark, InstallAppsmith ]}
-                        description2={
-                        <>
-                            <ul>
-                            <li>Benchmark d'outils no-code/self-host pour :
-                                <ul>
-                                <li>Créer facilement des apps internes</li>
-                                <li>Connexion API avec n8n</li>
-                                <li>Support de MongoDB (lecture/écriture)</li>
-                                <li>Création de dashboards</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Documentation suivie pour l'installation :{" "}
-                                <a href="https://docs.appsmith.com/getting-started/setup/installation-guides/docker" target="_blank" rel="noopener noreferrer">
-                                Docs Appsmith (Docker)
-                                </a>
-
-                            </li>
-                            <li>
-                                Configuration DNS : enregistrement A pour <code>tool.meetmagnet.fr</code> → IP du VPS (via OVH/Cloudflare).
-                            </li>
-                            </ul>
-                        </>
-                        }
-                    />
+                    {/* CONTEXTE ENTREPRISE */}
+                    <Col md={5} style={{paddingTop: "30px"}} className="internship-card">
+                        <InternshipProject
+                            title="MeetMagnet | AI-Powered Sales Intelligence"
+                            imgPath={MeetMagnet}
+                            description="MeetMagnet is a French SaaS startup that leverages Artificial Intelligence to help sales teams identify and contact qualified prospects at the perfect moment."
+                            description2="My role involved enhancing data acquisition tools and deploying internal infrastructure to support the platform's scaling."
+                        />    
                     </Col>
 
-                    <Col md={9} className="internship-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
-                    <InternshipProject
-                        title="Refonte de MeetMagnet - Configuration de supabase"
-                        imgPath={SupaBaseMeet}
-                        hasModal={true}
-                        description = "Installation et configuration de Supabase pour le projet MeetMagnet. Connexion au backend, création des tables, gestion des données utilisateurs. Test de la récupération et de l’envoi de données via l’interface."
-                        compTech="Supabase, PostGreSQL"
-                        comp1="Déployer et configurer une base de données"
-                        comp2="Tester les échanges client ↔ serveur"  
-                        ghLink="https://supabase.com/dashboard/project/ursjxjcwumyvdwrmfndv/database/schemas" 
-                        imgGallery={[SupaBaseCreate]}
-                        description2= {
-                            <>
-                            <ul>
-                                <li> Exemple d'un script de création des tables </li>
-                            </ul>
-                            </>
-                        }
-                    />      
-                </Col>
+                    {/* SCRAPING / DATA ACQUISITION */}
+                    <Col md={5} className="internships-cards" style={{ paddingTop: "30px"}}>
+                        <InternshipProject 
+                            title="Web Scraping & Data Automation"
+                            imgPath={Scrapper}
+                            hasModal={true}
+                            compTech="JavaScript (Puppeteer), HTML, CSV Processing"
+                            description="Developed a custom web scraper designed to automate the collection of SEO and domain metrics across multiple pages."
+                            comp1="Automated data extraction including Domain Authority, Organic Traffic, and Spam Scores."
+                            comp2="Built a pagination-handling engine with CSV export functionality for business analysis."
+                            imgGallery={[ notionScrapping ,BenchMarkScrapping ]}
+                            description2={
+                                <>
+                                    <h5>Scraping Objectives</h5>
+                                    <p>The goal was to feed the AI engine with high-quality domain data:</p>
+                                    <ul>
+                                        <li>Metrics: Domain Rating, Authority Score, Referring Domains.</li>
+                                        <li>Geographical and linguistic data for lead segmentation.</li>
+                                    </ul>
+                                    <h5>Development Approach</h5>
+                                    <ul>
+                                        <li>Scripted with Puppeteer to simulate human browsing and bypass basic bot detection.</li>
+                                        <li>Implementation of sequential scraping to ensure data integrity and avoid server blocking.</li>
+                                    </ul>
+                                </>
+                            }
+                        />
+                    </Col>
 
-                <Col md={9} className="internship-cards" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
+                    {/* INFRASTRUCTURE / INTERNAL TOOLS */}
+                    <Col md={5} className="internships-cards" style={{ paddingTop: "30px"}}>
+                        <InternshipProject
+                            title="Internal Tooling & Cloud Infrastructure"
+                            hasModal={true}
+                            imgPath={Appsmith}
+                            description="Self-hosted and configured Appsmith to build internal business dashboards, reducing dependency on third-party SaaS."
+                            compTech="Docker, Linux VPS, DNS Management"
+                            comp1="Deployed and managed containerized services using Docker."
+                            comp2="Configured custom DNS records and SSL certificates for secure internal access."
+                            imgGallery={[ TaskNotion ,BenchMark, InstallAppsmith ]}
+                            description2={
+                                <>
+                                    <h5>Infrastructure Tasks</h5>
+                                    <ul>
+                                        <li>Conducted a benchmark of no-code/low-code tools for rapid internal app development.</li>
+                                        <li>Integration with n8n and MongoDB for real-time data visualization.</li>
+                                        <li>Deployment on a Linux VPS via Docker Compose.</li>
+                                    </ul>
+                                    <h5>Networking</h5>
+                                    <p>Managed DNS A-records via Cloudflare to link 'tool.meetmagnet.fr' to the dedicated instance.</p>
+                                </>
+                            }
+                        />
+                    </Col>
 
-                <InternshipProject
-                        title="Refonte de MeetMagnet - Gestion des tâches "
-                        imgPath={KanbanMeet}
-                        hasModal={true}
-                        description="Organisation du travail sur le projet MeetMagnet à l’aide de Notion en Kanban. Les tâches sont planifiées, découpées en sous-tâches et suivies de manière structurée. Utilisation de Git avec branches (dev, main) pour une bonne gestion de version."
-                        compTech="Notion, Git, VSCode"
-                        comp1="Gérer un projet avec planification et sous-tâches"
-                        comp2="Travailler en équipe avec Git (branches, commit, merge)"
-                        ghLink="https://www.notion.so/meetmagnet/Refonte-Meet-Magnet-1ba253f85881809ab143f521f62f41f8"
-                        imgGallery={[OnboardingMeet,SupaBaseSQL, infoVue, FormTemp, SupaBaseInsert ]}
-                        description2= {
-                            <>
-                            <ul>
-                            <li> Voici un exemple de tâche rédigée et assignée par le tuteur dans Notion. Chaque tâche est :
-                                <ul>
-                                <li>Décomposée en sous-étapes claires à suivre</li>
-                                <li>Accompagnée d’éléments visuels (maquettes, exemples)</li>
-                                <li>Inclut de la documentation ou des instructions précises</li>
-                               
-                                </ul>
-                            </li>
-                            <li>
-                                Exemple d'une documentation NuxtJS :{" "}
-                                <a href="https://ui.nuxt.com/components/badge" target="_blank" rel="noopener noreferrer">
-                                Docs NuxtJS
-                                </a>
+                    {/* BACKEND & DATABASE MIGRATION */}
+                    <Col md={5} className="internship-cards" style={{ paddingTop: "30px"}}>
+                        <InternshipProject
+                            title="Backend Infrastructure & Database Management"
+                            imgPath={SupaBaseMeet}
+                            hasModal={true}
+                            description="Implementation and configuration of Supabase as the primary backend-as-a-service for the platform's reboot."
+                            compTech="Supabase, PostgreSQL, Backend Logic"
+                            comp1="Architected relational database tables and user authentication flows."
+                            comp2="Validated client-server communication via API testing."
+                            imgGallery={[SupaBaseCreate]}
+                            description2={
+                                <>
+                                    <h5>Database Engineering</h5>
+                                    <ul>
+                                        <li>Schema design for scalable user data management.</li>
+                                        <li>SQL script development for automated table creation and relational constraints.</li>
+                                    </ul>
+                                </>
+                            }
+                        />      
+                    </Col>
 
-                            </li>
-                           
-                            </ul>
-                        </>
+                    {/* PROJECT MANAGEMENT */}
+                    <Col md={5} className="internship-cards" style={{ paddingTop: "30px"}}>
+                        <InternshipProject
+                            title="Collaborative Development & Workflow"
+                            imgPath={KanbanMeet}
+                            hasModal={true}
+                            description="Managed the development lifecycle of the platform reboot using Agile methodologies and modern version control."
+                            compTech="Notion (Kanban), Git, NuxtJS"
+                            comp1="Coordinated tasks through a structured Kanban board with clear sprint objectives."
+                            comp2="Maintained a professional Git workflow using branch protection and peer-reviewed merges."
+                            imgGallery={[OnboardingMeet,SupaBaseSQL, infoVue, FormTemp, SupaBaseInsert ]}
+                            description2={
+                                <>
+                                    <h5>Project Execution</h5>
+                                    <p>Followed high development standards to ensure code maintainability:</p>
+                                    <ul>
+                                        <li>Task breakdown: Each feature was split into technical sub-tasks with visual mockups.</li>
+                                        <li>Documentation: Leveraged NuxtJS and Tailwind CSS documentation for modern UI development.</li>
+                                        <li>Versioning: Managed Dev/Main branches to separate stable releases from ongoing features.</li>
+                                    </ul>
+                                </>
+                            }
+                        />
+                    </Col>
 
-                        }
-                    />
-                </Col>
-
-                
-
-            
-            </Row>
-
-                
-        </section>
+                </Row>
+                <button type="button" onClick={goToLastPage} className="btn btn-next"> Previous Experience </button>
+            </section>
         </Container>
     )
 }

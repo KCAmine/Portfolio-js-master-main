@@ -8,27 +8,35 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Je m'appelle <span className="purple">Amine Mejdi </span>
-            je suis de  <span className="purple"> Nantes en France </span>
+            My name is  <span className="purple">Amine Mejdi </span>
+            I'm from <span className="purple"> Nantes - France   </span>
+            and I'm 21 years old.
             <br />
-            Je prépare actuellement un BTS en développement logiciel.
+            I just gratued computer sciences in college at  <span className="purple"> Lycée la coliniere </span>
+
+            
             <br />
-            J'ai obtenu mon bac professionnel en Systèmes Numériques.
+            
+            <br />
+          
+            I'm currently looking for a first experience as a junior web developer .
             
             <br />
             <br />
-            En dehors du code, voici quelques autres activités que j'aime faire !
+            Outside of coding, here are some other activities I enjoy!
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Jouez aux jeux 
+               Playing games 
             </li>
             <li className="about-activity">
-              <ImPointRight /> Lire
+             Learn new skills
             </li>
             <li className="about-activity">
-              <ImPointRight /> Voyager
+              Traveling
             </li>
+             
+
           </ul>
         </blockquote>
       </Card.Body>
