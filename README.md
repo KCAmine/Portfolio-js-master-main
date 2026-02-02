@@ -11,17 +11,17 @@ This project was built using these technologies.
 
 ## Features
 
-**📖 Multi-Page Layout**
+** Multi-Page Layout**
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+** Styled with React-Bootstrap and Css with easy to customize colors**
 
-**📱 Fully Responsive**
+** Fully Responsive** (sometimes) 
 
 ## Getting Started
 
 Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
 
-## 🛠 Installation and Setup Instructions
+##  Installation and Setup Instructions
 
 1. Installation: `npm install`
 
@@ -38,6 +38,6 @@ You will find all the components used and you can edit your information accordin
 
 
 
-Give a ⭐ if you like this website!
+
 
 
