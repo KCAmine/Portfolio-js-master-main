@@ -2,12 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCards from "./ProjectCards";
 import Particle from "../Particle";
-import Portfolio from "../../Assets/Projects/Portfolio.png"
 import guideNPf from "../../Assets/Projects/ressourceBooster.png"
 import miniStageNewPic from "../../Assets/Projects/miniStageNewPic.png"
-import PortfolioHomePage from "../../Assets/Projects/portfolioHomePage.png"
 import PortfolioImage from "../../Assets/Projects/portfolioImage.png"
-
+import Scrapper from "../../Assets/Projects/scrappeur.png"
 
 function Projects() {
 
@@ -92,6 +90,20 @@ function Projects() {
          
         />
         </Col>
+        
+         <Col md={4} className="project-card"  style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
+        <ProjectCards
+          title="Personal Google Extension "
+          imgPath={Scrapper}
+          technologies="JavaScript (Pupeteer) - HTML "
+          description="Developed a custom google extension scraper designed to automate the collection of SEO and domain metrics across multiple pages."
+          ghLink="https://github.com/KCAmine/bazoomScrapper.git"
+          
+          hasModal={false}
+         
+        />
+        </Col>
+
 
 
         </Row>

@@ -145,7 +145,7 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #181a27 !important;
+    background-color: rgba(20, 13, 17, 0.719) !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
@@ -320,6 +320,10 @@ button:focus {
   }
 }
 
+.home-section{
+  min-height:  95vh !important;
+}
+
 .home-about-section {
   position: relative;
   padding-bottom: 70px !important;
@@ -448,6 +452,7 @@ button:focus {
 /* Projects */
 /* --------- */
 .project-section {
+  min-height: 95vh !important;
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
@@ -552,6 +557,7 @@ button:focus {
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
+  min-height: 95vh !important;
 }
 
 .internship-section {
@@ -615,6 +621,7 @@ button:focus {
 /* --------- */
 
 .resume-section {
+  min-height: 98vh !important;
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;

@@ -12,14 +12,14 @@ function AboutCard() {
             I'm from <span className="purple"> Nantes - France   </span>
             and I'm 21 years old.
             <br />
-            I just gratued computer sciences in college at  <span className="purple"> Lycée la coliniere </span>
+            I just graduated computer sciences in college at  <span className="purple"> Lycée la coliniere </span>
 
             
             <br />
             
             <br />
           
-            I'm currently looking for a first experience as a junior web developer .
+            I'm currently looking for a first experience as a junior full stack developer .
             
             <br />
             <br />
@@ -27,10 +27,10 @@ function AboutCard() {
           </p>
           <ul>
             <li className="about-activity">
-               Playing games 
+              Learning new things 
             </li>
             <li className="about-activity">
-             Learn new skills
+              Running 
             </li>
             <li className="about-activity">
               Traveling

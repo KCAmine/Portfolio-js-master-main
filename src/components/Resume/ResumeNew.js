@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/about-me.pdf";
+
+import CvAmineMejdi from "../../Assets/CvAmineMEJDI.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -22,30 +23,33 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href={CvAmineMejdi}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Télécharger
+            &nbsp;Download
           </Button>
         </Row>
 
         <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          <Document file={CvAmineMejdi} className="d-flex justify-content-center">
+            <Page pageNumber={1} scale={width > 782 ? 1.7 : 0.6}
+           
+       
+             />
           </Document>
         </Row>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href={CvAmineMejdi}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Télécharger
+            &nbsp;Download
           </Button>
         </Row>
       </Container>

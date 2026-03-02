@@ -18,7 +18,9 @@ function Home2() {
                 <span className="purple"> ABOUT</span> ME 
             </h1>
             <p className="home-about-body">
-            Passionated by programming I actually think I learnt something ! 🤷‍♂️
+            Im a junior full stack developer with a strong desire to learn and grow in the field of web development.
+             <br />
+             I have a solid foundation in both front-end and back-end technologies, and I am eager to apply my skills to real-world projects. 
               <br />
               <br />
               <br />
@@ -30,7 +32,7 @@ function Home2() {
               <br />
               <br />
               I usually work with 
-               <b className="purple"> Symfony ,    JavaScript  </b> and sometimes other frameworks such as
+               <b className="purple"> Symfony ,   JavaScript  </b> and sometimes other frameworks such as
               <i>
                 <b className="purple">
                   {" "}
