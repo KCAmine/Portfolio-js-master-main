@@ -1,39 +1,42 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
+import { useTranslation } from "react-i18next";
 
 function AboutCard() {
+  const { t } = useTranslation();
   return (
+      
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            My name is  <span className="purple">Amine Mejdi </span>
-            I'm from <span className="purple"> Nantes - France   </span>
-            and I'm 21 years old.
+            {t('about.card.name')} <span className="purple">Amine Mejdi </span> . 
             <br />
-            I just graduated computer sciences in college at  <span className="purple"> Lycée la coliniere </span>
+            {t('about.card.from')} <span className="purple">Nantes - France </span> 
+            {t('about.card.age')}
+            <br />
+           {t('about.card.graduated')} <span className="purple"> Lycée la coliniere </span>
 
             
             <br />
             
             <br />
-          
-            I'm currently looking for a first experience as a junior full stack developer .
+           
+            {t('about.card.looking')}
             
             <br />
             <br />
-            Outside of coding, here are some other activities I enjoy!
+            {t('about.card.hobbies_title')}
           </p>
           <ul>
             <li className="about-activity">
-              Learning new things 
+              {t('about.card.hobby1')}
             </li>
             <li className="about-activity">
-              Running 
+              {t('about.card.hobby2')}
             </li>
             <li className="about-activity">
-              Traveling
+              {t('about.card.hobby3')}
             </li>
              
 

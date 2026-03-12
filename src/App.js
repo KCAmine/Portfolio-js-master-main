@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
@@ -26,27 +26,29 @@ function App() {
     const timer = setTimeout(() => {
       upadateLoad(false);
     }, 1200);
-
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/internship" element={<Internship />} />
-          <Route path="/internshipMeet" element={<InternshipMeet/>}/>
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
-        <Footer />
-      </div>
+   
+      <Suspense fallback={<Preloader load={true} />}>
+        <Preloader load={load} />
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <Navbar />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/project" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/internship" element={<Internship />} />
+            <Route path="/internshipMeet" element={<InternshipMeet/>}/>
+            <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<Navigate to="/"/>} />
+          </Routes>
+          <Footer />
+        </div>
+      </Suspense>
     </Router> 
   );
 }

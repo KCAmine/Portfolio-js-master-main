@@ -1,0 +1,207 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "resume": "Resume",
+    "internships": "Internships"
+  },
+  "about": {
+    "title": "Who am I",
+    "tech_title": "Technologies & languages learnt at school & internships",
+    "tool_title": "Software & IDE used",
+    "card": {
+      "name": "My name is ",
+      "from": "I'm from",
+      "age": "and I'm 21 years old.",
+      "graduated": "I just graduated computer sciences in college at",
+      "looking": "I'm currently looking for a first experience as a junior full stack developer.",
+      "hobbies_title": "Outside of coding, here are some other activities I enjoy!",
+      "hobby1": "Learning new things",
+      "hobby2": "Running",
+      "hobby3": "Traveling"
+    }
+  },
+  "projects": {
+    "title": "Recents ",
+    "title span class": "Projects",
+    "description": "Here are some of my recent projects. Click on the project name to see more details about it!",
+    "project1": {
+      "name": "NPF Guide",
+      "technologies": "Vitepress - Javascript - CSS",
+      "description": "A personal web project focused on gaming guides. It offers clear, practical tips and well-structured content. Its goal is to help players optimize their runs."
+    },
+    "project2": {
+      "name": "Mini Stage",
+      "technologies": "Symfony - PHP - JavaScript",
+      "description": "MiniStage is an internship booking platform for students, redesigned as a project using Symfony with full website security.",
+      "description2": "Team project to redesign an internship booking management website: fixes, security improvements, and an upgrade from PHP7 to Symfony 7. ",
+      "task_title" : "Completed tasks ",
+      "first_task" : "Hotfixes and creation of a new database",
+      "second_task" : "Symfony 7 development (back-end & secured routes)",
+      "third_task": "Complete project reorganization into 4 teams (admin, booking...)",
+      "security_title" : " Security ",
+      "first_sec" : "Access control for each user role",
+      "second_sec" : "Use of prepared statements (anti-SQL injection)",
+      "third_sec" : "Environments variables configuration file setup",
+      "fourth_sec" : "Validation and update of regular expressions",
+      "colab_title" : "Collaborative work",
+      "first_colab" : "Ticket and branch tracking on Framagit",
+      "second_colab" : "Weekly assigned Scrum Masters"
+      
+      
+    },
+    "project3": {
+      "name": "Personal Portfolio",
+      "technologies": "React - Javascript - CSS",
+      "description": "A personal web project that serves as a portfolio to showcase my skills, experience, and projects. It provides an overview of my background and highlights my work in the field of software development."
+    },
+    "project4": {
+      "name": "Scrapper",
+      "technologies": "JavaScript - Puppeteer",
+      "description": "Developed a custom google extension scraper designed to automate the collection of SEO and domain metrics across multiple pages."
+    }
+
+
+  },
+  "resume": {
+    "download_btn" : "Download"
+  }, 
+  
+  "internship": {
+    "internshipName" : " Internship as a full stack developer",
+    "common": {
+      "note": "Note: Visuals are blurred or simplified to protect sensitive corporate data.",
+      "skills": "Skills:",
+      "details_btn": "Details",
+      "close_btn": "Close",
+      "next_exp": "Next Experience",
+      "prev_exp": "Previous Experience",
+      "overview": "Overview"
+    },
+    "yole": {
+      "page_title": "Full-Stack Developer <1> Internship </1>",
+      "company": {
+        "title": "Yole Group | High-Tech Market Analysis",
+        "desc": "Yole Group provides market research, technology and strategy analysis, reverse engineering and costing, and photonics module performance evaluation, focused on the semiconductor industry and related fields",
+        "desc2": "Context: Operating in a high-security environment with sensitive data from a high-tech firm."
+      },
+      "project_admin": {
+        "title": "Yole Digit Admin",
+        "desc": "I worked on 'Yole Digit Admin', an internal enterprise platform. This tool is the backbone of the company's digital services, allowing admins to manage thousands of client accounts, product licenses, and data access.",
+        "desc2": "My Goal : Developing secure features to automate subscription management and user access."
+      },
+      "agile": {
+        "title": "Agile Integration",
+        "tech": "Scrum Methodology",
+        "comp1": "Working within a structured Agile team with daily stand-ups and bi-weekly sprints.",
+        "comp2": "Bridging the gap between client requirements and technical execution.",
+        "modal_title": "Agile Context",
+        "modal_desc": "At Yole, software quality is priority #1. We followed a strict Scrum lifecycle to ensure every feature was tested and validated before moving to production."
+      },
+      "requirements": {
+        "title": "Requirement Engineering",
+        "tech": "Jira & Technical Spec",
+        "comp1": "Translated complex business needs into actionable technical tickets.",
+        "comp2": "Analyzed existing database schemas to ensure seamless feature integration."
+      },
+      "stack": {
+        "title": "Full-Stack Implementation",
+        "tech": "React.js & Java Spring Boot",
+        "comp1": "Developed scalable UI components using React and managed backend logic with Spring Boot.",
+        "comp2": "Maintained code integrity within a large-scale enterprise architecture."
+      },
+      "git": {
+        "title": "Version Control & Peer Review",
+        "tech": "Git & BitBucket",
+        "comp1": "Used BitBucket for collaborative coding, following a strict branch naming convention.",
+        "comp2": "Engaged in Pull Request reviews to maintain high security and performance standards."
+      }
+    },
+    "meetmagnet": {
+      "page_title": "MeetMagnet <1> Experience </1>",
+      "company": {
+        "title": "MeetMagnet | AI-Powered Sales Intelligence",
+        "desc": "MeetMagnet is a French SaaS startup that leverages Artificial Intelligence to help sales teams identify and contact qualified prospects at the perfect moment.",
+        "desc2": "My role involved enhancing data acquisition tools and deploying internal infrastructure to support the platform's scaling."
+      },
+      "scraping": {
+        "title": "Web Scraping & Data Automation",
+        "tech": "JavaScript (Puppeteer), HTML, CSV Processing",
+        "desc": "Developed a custom web scraper designed to automate the collection of SEO and domain metrics across multiple pages.",
+        "comp1": "Automated data extraction including Domain Authority, Organic Traffic, and Spam Scores.",
+        "comp2": "Built a pagination-handling engine with CSV export functionality for business analysis.",
+        "modal_h1": "Scraping Objectives",
+        "modal_p1": "The goal was to feed the AI engine with high-quality domain data:",
+        "modal_li1": "Metrics: Domain Rating, Authority Score, Referring Domains.",
+        "modal_li2": "Geographical and linguistic data for lead segmentation.",
+        "modal_h2": "Development Approach",
+        "modal_li3": "Scripted with Puppeteer to simulate human browsing and bypass basic bot detection.",
+        "modal_li4": "Implementation of sequential scraping to ensure data integrity and avoid server blocking."
+      },
+      "infra": {
+        "title": "Internal Tooling & Cloud Infrastructure",
+        "tech": "Docker, Linux VPS, DNS Management",
+        "desc": "Self-hosted and configured Appsmith to build internal business dashboards, reducing dependency on third-party SaaS.",
+        "comp1": "Deployed and managed containerized services using Docker.",
+        "comp2": "Configured custom DNS records and SSL certificates for secure internal access.",
+        "modal_h1": "Infrastructure Tasks",
+        "modal_li1": "Conducted a benchmark of no-code/low-code tools for rapid internal app development.",
+        "modal_li2": "Integration with n8n and MongoDB for real-time data visualization.",
+        "modal_li3": "Deployment on a Linux VPS via Docker Compose.",
+        "modal_h2": "Networking",
+        "modal_p1": "Managed DNS A-records via Cloudflare to link 'tool.meetmagnet.fr' to the dedicated instance."
+      },
+      "backend": {
+        "title": "Backend Infrastructure & Database Management",
+        "tech": "Supabase, PostgreSQL, Backend Logic",
+        "desc": "Implementation and configuration of Supabase as the primary backend-as-a-service for the platform's reboot.",
+        "comp1": "Architected relational database tables and user authentication flows.",
+        "comp2": "Validated client-server communication via API testing.",
+        "modal_h1": "Database Engineering",
+        "modal_li1": "Schema design for scalable user data management.",
+        "modal_li2": "SQL script development for automated table creation and relational constraints."
+      },
+      "management": {
+        "title": "Collaborative Development & Workflow",
+        "tech": "Notion (Kanban), Git, NuxtJS",
+        "desc": "Managed the development lifecycle of the platform reboot using Agile methodologies and modern version control.",
+        "comp1": "Coordinated tasks through a structured Kanban board with clear sprint objectives.",
+        "comp2": "Maintained a professional Git workflow using branch protection and peer-reviewed merges.",
+        "modal_h1": "Project Execution",
+        "modal_p1": "Followed high development standards to ensure code maintainability:",
+        "modal_li1": "Task breakdown: Each feature was split into technical sub-tasks with visual mockups.",
+        "modal_li2": "Documentation: Leveraged NuxtJS and Tailwind CSS documentation for modern UI development.",
+        "modal_li3": "Versioning: Managed Dev/Main branches to separate stable releases from ongoing features."
+      }
+    }
+  },
+  "home": {
+  "hi": "Hi !",
+  "name_intro": "My name is",
+  "typewriter": {
+    "dev": "Junior full stack developer",
+    "lead": "Future lead developer",
+    "passion": "Passionate about coding"
+  },
+  "about": {
+    "title_span": "ABOUT",
+    "title_end": "ME",
+    "body1": "I'm a junior full stack developer with a strong desire to learn and grow in the field of web development.",
+    "body2": "I have a solid foundation in both front-end and back-end technologies, and I am eager to apply my skills to real-world projects.",
+    "love_building": "I love building new tools that matter like",
+    "tools": "websites, software, guides and more",
+    "work_with": "I usually work with",
+    "frameworks": "and sometimes other frameworks such as",
+    "social_title": "FIND ME ON",
+    "social_p": "Feel free to <1>contact me</1> on any of these platforms"
+  }
+},
+"footer": {
+  "dev_by": "Designed and Developed by Amine MEJDI",
+  "copyright": "Copyright © {{year}} AM"
+}
+}
+
+
+  

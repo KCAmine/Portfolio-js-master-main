@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next"; 
 import { CgGitFork } from "react-icons/cg";
 import {
   AiFillStar,
@@ -11,12 +12,20 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+
+
+  const { t, i18n } = useTranslation();
+
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    updateExpanded(false); 
+  };
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -36,9 +45,7 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          
-        </Navbar.Brand>
+        <Navbar.Brand href="/" className="d-flex"></Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -52,55 +59,46 @@ function NavBar() {
         </Navbar.Toggle>
         
         <Navbar.Collapse id="responsive-navbar-nav">
-          
           <Nav className="ms-auto" defaultActiveKey="#home">
+            
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> {t('navbar.home')}
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About Me
+              <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> {t('navbar.about')}
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
+              <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
+                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> {t('navbar.projects')}
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              <Nav.Link as={Link} to="/resume" onClick={() => updateExpanded(false)}>
+                <CgFileDocument style={{ marginBottom: "2px" }} /> {t('navbar.resume')}
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/internship"
-                onClick={()=> updateExpanded(false)}
-              >
-                <CgFileDocument style={{marginBottom: "2px"}} /> Internships
+              <Nav.Link as={Link} to="/internship" onClick={() => updateExpanded(false)}>
+                <CgFileDocument style={{ marginBottom: "2px" }} /> {t('navbar.internships')}
               </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item style={{ display: "flex", alignItems: "center", marginLeft: "15px" }}>
+              <Button
+                onClick={() => changeLanguage(i18n.language === 'en' ? 'fr' : 'en')}
+                style={{ fontSize: "0.8em", padding: "4px 10px" }}
+                className="fork-btn-inner"
+              >
+                {i18n.language === 'en' ? "FR" : "US"}
+              </Button>
             </Nav.Item>
 
             <Nav.Item className="fork-btn">

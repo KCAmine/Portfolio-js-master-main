@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+
 import { FaUserGroup } from "react-icons/fa6";
 import Container from "react-bootstrap/Container";
 
@@ -14,16 +14,13 @@ function ProjectCards(props) {
     <>
       <Card className="project-card-view">
       <Card.Title style={{ paddingTop: "20px" }} > <strong>{props.title}</strong></Card.Title>
-        
-
-
         <Container style={{ padding: "10px", height: "300px", overflow: "hidden" }}> 
         <Card.Img variant="top"  style={{ width: "100%", height: "100%", objectFit: "cover" }}src={props.imgPath} alt="card-img" />
         </Container>
         <Card.Body>
           <Card.Text style={{ textAlign: "justify" }}>
             <ul>
-              <li><strong>Built with  {props.technologies}</strong></li>
+              <li><strong> {props.technologies}</strong></li>
             </ul>
           </Card.Text>
 
@@ -56,7 +53,6 @@ function ProjectCards(props) {
             </Button>
           )}
 
-          {/* Détails via modal */}
           {props.hasModal && (
             <Button
               variant="secondary"
@@ -69,7 +65,6 @@ function ProjectCards(props) {
         </Card.Body>
       </Card>
 
-      {/* Modal détail */}
       {props.hasModal && (
         <Modal
           show={show}

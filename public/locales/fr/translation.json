@@ -1,0 +1,202 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "resume": "CV",
+    "internships": "Stages"
+  },
+  "about": {
+    "title": "Qui suis-je ?",
+    "tech_title": "Technologies et langages appris à l'école et en stages",
+    "tool_title": "Logiciels & IDE utilisés",
+    "card": {
+      "name": "Mon nom est ",
+      "from": "Je viens de",
+      "age": "et j'ai 21 ans.",
+      "graduated": "Je viens d'être diplômé en informatique au",
+      "looking": "Je recherche actuellement une première expérience en tant que développeur full stack junior.",
+      "hobbies_title": "En dehors du code, voici d'autres activités que j'apprécie !",
+      "hobby1": "Apprendre de nouvelles choses",
+      "hobby2": "Courir",
+      "hobby3": "Voyager"
+    }
+  },
+  
+  "projects": {
+    "title": "Mes derniers ",
+    "title span class": "Projets",
+    "description": "Voici quelques-uns de mes projets récents. Cliquez sur le titre pour en savoir plus !",
+    "project1": {
+      "name": "NPF Guide",
+      "technologies": "Vitepress - Javascript - CSS",
+      "description": "Un projet personnel dédié aux guides de jeux vidéo. Il propose des astuces concrètes et une structure claire pour aider les joueurs à optimiser leurs sessions."
+    },
+    "project2": {
+      "name": "Mini Stage",
+      "technologies": "Symfony - PHP - JavaScript",
+      "description": "MiniStage est une plateforme de réservation de stages pour étudiants, entièrement refondue sous Symfony avec un focus sur la sécurité.",
+      "description2": "Projet d'équipe visant la refonte d'un site de gestion de stages : correctifs, renforcement de la sécurité et migration de PHP7 vers Symfony 7.",
+      "task_title": "Missions réalisées",
+      "first_task": "Correctifs d'urgence et création d'une nouvelle base de données",
+      "second_task": "Développement sous Symfony 7 (back-end et routes sécurisées)",
+      "third_task": "Réorganisation complète du projet en 4 pôles (admin, réservation...)",
+      "security_title": "Sécurité",
+      "first_sec": "Contrôle d'accès selon les rôles utilisateurs",
+      "second_sec": "Utilisation de requêtes préparées (anti-injection SQL)",
+      "third_sec": "Mise en place de fichiers de configuration pour les variables d'environnement",
+      "fourth_sec": "Validation et mise à jour des expressions régulières (Regex)",
+      "colab_title": "Travail collaboratif",
+      "first_colab": "Suivi des tickets et des branches sur Framagit",
+      "second_colab": "Rotation hebdomadaire des Scrum Masters"
+    },
+    "project3": {
+      "name": "Portfolio Personnel",
+      "technologies": "React - Javascript - CSS",
+      "description": "Mon portfolio personnel conçu pour présenter mes compétences et mes réalisations. Il offre une vue d'ensemble sur mon parcours de développeur junior."
+    },
+    "project4": {
+      "name": "Scrapper",
+      "technologies": "JavaScript - Puppeteer",
+      "description": "Développement d'une extension Google personnalisée dédiée au scraping, permettant d'automatiser la collecte de métriques SEO et de données de domaines."
+    }
+  },
+  "resume": {
+    "download_btn" : "Télécharger"
+  },
+  
+  "internship": {
+    "internshipName" : " Stage en tant que développeur full stack",
+    "common": {
+      "note": "Note : Les visuels sont floutés ou simplifiés pour protéger les données sensibles de l'entreprise.",
+      "skills": "Compétences :",
+      "details_btn": "Détails",
+      "close_btn": "Fermer",
+      "next_exp": "Expérience Suivante",
+      "prev_exp": "Expérience Précédente",
+      "overview": "Aperçu"
+    },
+    "yole": {
+      "page_title": "Stage Développeur <1> Full-Stack </1>",
+      "company": {
+        "title": "Yole Group | Analyse de Marché High-Tech",
+        "desc": "Yole Group propose des études de marché, des analyses stratégiques et technologiques, ainsi que du reverse engineering axé sur l'industrie des semi-conducteurs.",
+        "desc2": "Contexte : Travail en environnement sécurisé avec des données sensibles pour une entreprise de haute technologie."
+      },
+      "project_admin": {
+        "title": "Yole Digit Admin",
+        "desc": "J'ai travaillé sur 'Yole Digit Admin', une plateforme interne cruciale pour les services numériques de l'entreprise, permettant de gérer les comptes clients, les licences et les accès aux données.",
+        "desc2": "Mon objectif : Développer des fonctionnalités sécurisées pour automatiser la gestion des abonnements."
+      },
+      "agile": {
+        "title": "Intégration Agile",
+        "tech": "Méthodologie Scrum",
+        "comp1": "Travail au sein d'une équipe Agile structurée (daily stand-ups, sprints de 2 semaines).",
+        "comp2": "Lien entre les besoins clients et l'exécution technique.",
+        "modal_title": "Contexte Agile",
+        "modal_desc": "Chez Yole, la qualité logicielle est la priorité. Nous avons suivi un cycle Scrum strict pour garantir que chaque fonctionnalité soit validée avant la mise en production."
+      },
+      "requirements": {
+        "title": "Ingénierie des Besoins",
+        "tech": "Jira & Spécifications Techniques",
+        "comp1": "Traduction de besoins business complexes en tickets techniques actionnables.",
+        "comp2": "Analyse des schémas de base de données existants pour l'intégration de nouvelles fonctions."
+      },
+      "stack": {
+        "title": "Développement Full-Stack",
+        "tech": "React.js & Java Spring Boot",
+        "comp1": "Développement de composants UI scalables avec React et gestion de la logique métier avec Spring Boot.",
+        "comp2": "Maintien de l'intégrité du code au sein d'une architecture d'entreprise à grande échelle."
+      },
+      "git": {
+        "title": "Versionning et pull request ",
+        "tech": "Git & BitBucket",
+        "comp1": "Utilisation de BitBucket pour le code collaboratif avec des conventions de nommage strictes.",
+        "comp2": "Revues de Pull Requests pour garantir la sécurité et les standards de performance."
+      }
+    },
+    "meetmagnet": {
+      "page_title": "Expérience <1> MeetMagnet </1>",
+      "company": {
+        "title": "MeetMagnet | Intelligence Commerciale par l'IA",
+        "desc": "MeetMagnet est une startup SaaS française utilisant l'IA pour aider les équipes commerciales à identifier et contacter des prospects qualifiés au moment opportun.",
+        "desc2": "Mon rôle : Améliorer les outils d'acquisition de données et déployer l'infrastructure interne pour soutenir la croissance."
+      },
+      "scraping": {
+        "title": "Web Scraping & Automatisation",
+        "tech": "JavaScript (Puppeteer), HTML, Traitement CSV",
+        "desc": "Développement d'un scraper sur mesure pour automatiser la collecte de métriques SEO et de données de domaines.",
+        "comp1": "Extraction automatisée : Domain Authority, trafic organique et scores de spam.",
+        "comp2": "Moteur de gestion de pagination avec export CSV pour l'analyse métier.",
+        "modal_h1": "Objectifs du Scraping",
+        "modal_p1": "L'objectif était d'alimenter le moteur d'IA avec des données de haute qualité :",
+        "modal_li1": "Métriques : Domain Rating, Authority Score, Domaines référents.",
+        "modal_li2": "Données géographiques et linguistiques pour la segmentation.",
+        "modal_h2": "Approche Technique",
+        "modal_li3": "Scripts Puppeteer simulant une navigation humaine pour contourner les détections de bots.",
+        "modal_li4": "Scraping séquentiel pour garantir l'intégrité des données."
+      },
+      "infra": {
+        "title": "Outils Internes & Infrastructure Cloud",
+        "tech": "Docker, VPS Linux, Gestion DNS",
+        "desc": "Auto-hébergement et configuration d'Appsmith pour créer des tableaux de bord internes, réduisant la dépendance aux SaaS tiers.",
+        "comp1": "Déploiement et gestion de services conteneurisés via Docker.",
+        "comp2": "Configuration de records DNS et certificats SSL pour des accès internes sécurisés.",
+        "modal_h1": "Missions Infrastructure",
+        "modal_li1": "Benchmark d'outils no-code/low-code pour le développement rapide d'apps internes.",
+        "modal_li2": "Intégration avec n8n et MongoDB pour la visualisation de données en temps réel.",
+        "modal_li3": "Déploiement sur VPS Linux via Docker Compose.",
+        "modal_h2": "Réseau",
+        "modal_p1": "Gestion des zones DNS via Cloudflare pour lier 'tool.meetmagnet.fr' à l'instance dédiée."
+      },
+      "backend": {
+        "title": "Backend & Gestion de Base de Données",
+        "tech": "Supabase, PostgreSQL, Logique Backend",
+        "desc": "Mise en place et configuration de Supabase comme backend-as-a-service principal pour la refonte de la plateforme.",
+        "comp1": "Architecture des tables relationnelles et des flux d'authentification.",
+        "comp2": "Validation des communications client-serveur via des tests API.",
+        "modal_h1": "Ingénierie de Base de Données",
+        "modal_li1": "Conception de schémas pour une gestion évolutive des données utilisateurs.",
+        "modal_li2": "Scripts SQL pour la création automatisée de tables et de contraintes."
+      },
+      "management": {
+        "title": "Développement Collaboratif & Workflow",
+        "tech": "Notion (Kanban), Git, NuxtJS",
+        "desc": "Gestion du cycle de vie de la refonte logicielle via les méthodologies Agiles et le contrôle de version moderne.",
+        "comp1": "Coordination des tâches via un board Kanban avec des objectifs de sprint clairs.",
+        "comp2": "Workflow Git professionnel avec protection de branches et fusions après peer-review.",
+        "modal_h1": "Exécution du Projet",
+        "modal_p1": "Respect de standards de développement élevés pour la maintenabilité :",
+        "modal_li1": "Découpage : Chaque fonction divisée en sous-tâches techniques avec maquettes.",
+        "modal_li2": "Documentation : Utilisation des docs NuxtJS et Tailwind CSS pour une UI moderne.",
+        "modal_li3": "Versionning : Gestion des branches Dev/Main pour séparer les sorties stables."
+      }
+    }
+  },
+  "home": {
+  "hi": "Salut !",
+  "name_intro": "Je m'appelle",
+  "typewriter": {
+    "dev": "Développeur Full Stack Junior",
+    "lead": "Futur Lead Développeur",
+    "passion": "Passionné par le code"
+  },
+  "about": {
+    "title_span": "À PROPOS",
+    "title_end": "DE MOI",
+    "body1": "Je suis un développeur full stack junior avec une forte envie d'apprendre et d'évoluer dans le domaine du développement web.",
+    "body2": "J'ai des bases solides en technologies front-end et back-end, et j'ai hâte d'appliquer mes compétences sur des projets concrets.",
+    "love_building": "J'adore créer des outils utiles tels que des",
+    "tools": "sites web, logiciels, guides et plus encore",
+    "work_with": "Je travaille principalement avec",
+    "frameworks": "et parfois d'autres frameworks comme",
+    "social_title": "RETROUVEZ-MOI SUR",
+    "social_p": "N'hésitez pas à me <1>contacter</1> sur l'une de ces plateformes"
+  }
+},
+"footer": {
+  "dev_by": "Conçu et développé par Amine MEJDI",
+  "copyright": "Droits d'auteur © {{year}} AM"
+}
+}
+

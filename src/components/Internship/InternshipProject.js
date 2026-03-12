@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { Card, Button, Modal } from "react-bootstrap";
-import { FaUserGroup } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 function InternshipProject(props) {
   const [show, setShow] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
       <Card className="project-card-view">
         <Card.Title style={{ textAlign: "center", paddingTop: "30px" }}>{props.title}</Card.Title>
 
-        {/* Image principale dans la carte */}
         <Card.Img variant="top" style={{ width: "100%", height: "60%"}} src={props.imgPath} alt="" />
-         {/* Disclaimer for sensitive data */}
             <p style={{ fontSize: "0.8rem", fontStyle: "italic", textAlign: "center", marginTop: "5px", color: "#888" }}>
-                Note: Visuals are blurred or simplified to protect sensitive corporate data.
+               {t('internship.common.note')}
             </p>
 
         <Card.Body>
@@ -27,7 +26,7 @@ function InternshipProject(props) {
           )}
 
           {props.compTech && (
-            <Card.Text><strong>Skills:</strong> {props.compTech}</Card.Text>
+            <Card.Text><strong></strong>{t('internship.common.skills')} {props.compTech}</Card.Text>
           )}
 
           {(props.comp1 || props.comp2) && (
@@ -37,25 +36,18 @@ function InternshipProject(props) {
             </ul>
           )}
 
-        
-            
-              
-       
-
-          {/* Affiche le bouton Détails uniquement si hasModal est true */}
           {props.hasModal && (
             <Button
               variant="secondary"
               onClick={() => setShow(true)}
               style={{ marginLeft: "10px" }}
             >
-              Details
+             {t('internship.common.details_btn')}
             </Button>
           )}
         </Card.Body>
       </Card>
 
-      {/* Affiche le modal uniquement si hasModal est true */}
       {props.hasModal && (
         <Modal
           show={show}
@@ -65,7 +57,7 @@ function InternshipProject(props) {
           contentClassName="custom-modal-dark"
         >
           <Modal.Header closeButton>
-            <Modal.Title>{props.title} - Overview </Modal.Title>
+            <Modal.Title>{props.title} -{t('internship.common.overview')} </Modal.Title>
           </Modal.Header>
 
           <Modal.Body>
@@ -86,7 +78,7 @@ function InternshipProject(props) {
           </Modal.Body>
 
           <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShow(false)}>Close</Button>
+            <Button variant="secondary" onClick={() => setShow(false)}>{t('internship.common.close_btn')}</Button>
           </Modal.Footer>
         </Modal>
       )}

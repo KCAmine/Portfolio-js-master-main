@@ -6,27 +6,29 @@ import guideNPf from "../../Assets/Projects/ressourceBooster.png"
 import miniStageNewPic from "../../Assets/Projects/miniStageNewPic.png"
 import PortfolioImage from "../../Assets/Projects/portfolioImage.png"
 import Scrapper from "../../Assets/Projects/scrappeur.png"
+import { useTranslation } from "react-i18next";
 
 function Projects() {
+  const { t } = useTranslation(); 
 
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          Recents   <strong className="purple"> projects </strong>
+          {t('projects.title')} <span className="purple"> {t('projects.title span class')} </span>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          {t('projects.description')}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px"}}>
           <Col md={4} className="project-card">
             <ProjectCards
               imgPath={guideNPf}
               isBlog={false}
-              title="NPF Guide "
-              technologies="Vitepress - Javascript - CSS"
-              description="A personal web project focused on gaming guides. It offers clear, practical tips and well-structured content. Its goal is to help players optimize their runs."
+              title= {t('projects.project1.name')}
+              technologies={t('projects.project1.technologies')}
+              description={t('projects.project1.description')}
               ghLink="https://github.com/KCAmine/guideFarm"
               demoLink="https://guide-npf.com"
             />
@@ -37,10 +39,10 @@ function Projects() {
         <Col md={4} className="project-card" style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px" }}>
 
       <ProjectCards
-        title="Mini Stage  "
+        title={t('projects.project2.name')}
         imgPath={miniStageNewPic}
-        technologies="Symfony - PHP  - JavaScript"
-        description="MiniStage is an internship booking platform for students, redesigned as a project using Symfony with full website security."
+        technologies={t('projects.project2.technologies')}
+        description={t('projects.project2.description')}
         ghLink="https://framagit.org/coliniere/discover/ministagesymfo"
         hasModal={true}
         
@@ -48,42 +50,40 @@ function Projects() {
         description2={
           <>
             <p>
-              Team project to redesign an internship booking management website: fixes, security improvements, and an upgrade from PHP7 to Symfony 7.
+              {t('projects.project2.description2')}
             </p>
 
-            <h5> Completed tasks</h5>
+            <h5> {t('projects.project2.task_title')} </h5>
             <ul>
-              <li>Hotfixes + creation of a new database</li>
-              <li>Symfony 7 development (backend + secured routes)</li>
-              <li>Complete project reorganization into 4 teams (admin, booking...)</li>
+              <li> {t('projects.project2.first_task')} </li>
+              <li> {t('projects.project2.second_task')} </li>
+              <li> {t('projects.project2.third_task')} </li>
             </ul>
 
-            <h5> Security</h5>
+            <h5> {t('projects.project2.security_title')} </h5>
             <ul>
-              <li>Access control for each user role</li>
-              <li>Use of prepared statements (anti-SQL injection)</li>
-              <li>Environment variables configuration file setup</li>
-              <li>Validation and update of <code>regular expressions</code></li>
+              <li> {t('projects.project2.first_sec')} </li>
+              <li> {t('projects.project2.second_sec')} </li>
+              <li> {t('projects.project2.third_sec')} </li>
+              <li> {t('projects.project2.fourth_sec')} </li>
             </ul>
 
-            <h5> Collaborative work</h5>
+            <h5> {t('projects.project2.colab_title')} </h5>
             <ul>
-              <li>Ticket and branch tracking on Framagit</li>
-              <li>Weekly assigned Scrum Masters</li>
+              <li> {t('projects.project2.first_colab')} </li>
+              <li> {t('projects.project2.second_colab')} </li>
             </ul>
           </>
         }
       />
     </Col>
 
-      
-
         <Col md={4} className="project-card"  style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
         <ProjectCards
-          title="Personal Portfolio "
+          title={t('projects.project3.name')}
           imgPath={PortfolioImage}
-          technologies="React JS - JavaScript - CSS "
-          description="Development of my professional portfolio to showcase my projects, skills, and educational background."
+          technologies={t('projects.project3.technologies')}
+          description={t('projects.project3.description')}
           ghLink="https://github.com/KCAmine/Portfolio-js-master-main"
           demoLink="https://mejdiamine.fr"
           hasModal={false}
@@ -93,18 +93,16 @@ function Projects() {
         
          <Col md={4} className="project-card"  style={{ justifyContent: "center", paddingBottom: "15px", paddingTop: "30px"}}>
         <ProjectCards
-          title="Personal Google Extension "
+          title={t('projects.project4.name')}
           imgPath={Scrapper}
-          technologies="JavaScript (Pupeteer) - HTML "
-          description="Developed a custom google extension scraper designed to automate the collection of SEO and domain metrics across multiple pages."
+          technologies={t('projects.project4.technologies')}
+          description={t('projects.project4.description')}
           ghLink="https://github.com/KCAmine/bazoomScrapper.git"
           
           hasModal={false}
          
         />
         </Col>
-
-
 
         </Row>
       </Container>
